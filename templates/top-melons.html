@@ -1,0 +1,32 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Melon Love &#10024;</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Hello {{session.get("user_name")}}!</h1>
+<!-- Create a div for every Most Loved Melon using a Jinja for loop -->
+<!--     <div class='melon-div'>
+        <h3>Texas Golden Watermelon</h3>
+        <h2>Loved 598 times.</h2>
+        <img src='http://www.rareseeds.com/assets/1/14/DimThumbnail/Texas-Golden-2-Watermelon-web.jpg'>
+    </div> -->
+
+       <div id='melon-info-dis'>
+        <h3>Number of times loved:</h3>
+            <p>{{melons['num_loves']}}</p>
+        <h3>Hey {{session.get("user_name")}}, this is a {{melons['name']}}.</h3>
+        <img src = "{{melons['img']}}">
+
+        </div>
+
+{% endblock %}
+</body>
+</html>

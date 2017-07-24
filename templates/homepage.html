@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Melon Love &#10024;</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+  {% extends 'base.html' %}
+
+  {% block body %}
+    <h1>UberMelon’s Most Loved Melons</h1>
+
+<!-- Create a form for users to fill in their name and submit -->
+   <form action="/get_name">
+              <label>Tell Us Your Name:
+                <input type="text" 
+                       name="user_name" 
+                       placeholder="first name"
+                       required>
+              </label>
+        <button type="submit">Sign In
+        </button>
+    </form>
+{% endblock %}
+</body>
+</html>
